@@ -1,0 +1,23 @@
+{% import 'macro' as macro %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{{ plot.page_title }}</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html, body, div.pyg2plot-plot-container { 
+            height: 100%;
+            overflow: hidden;
+        }
+    </style>
+    {{ macro.render_plot_dependencies(plot) }}
+</head>
+<body>
+    {{ macro.render_plot_content(plot) }}
+</body>
+</html>

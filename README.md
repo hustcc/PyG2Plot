@@ -1,6 +1,6 @@
 # PyG2Plot
 
-> 🎨 Python3 binding for `@AntV/G2Plot` Plotting Library.
+> 🎨 Python3 binding for `@AntV/G2Plot` Plotting Library. Inspired by pyecharts.
 
 [![Latest Stable Version](https://img.shields.io/pypi/v/pyg2plot.svg)](https://pypi.python.org/pypi/pyg2plot)
 [![build Status](https://github.com/hustcc/pyg2plot/workflows/build/badge.svg?branch=main)](https://github.com/hustcc/pyg2plot/actions?query=workflow%3Abuild)

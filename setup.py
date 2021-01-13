@@ -21,7 +21,7 @@ __url__ = "https://github.com/hustcc/pyg2plot"
 __author_email__ = "i@hust.cc"
 __license__ = "MIT"
 
-__requires__ = ["jinja2~=2.11.2"]
+__requires__ = ["jinja2~=2.11.2", "simplejson"]
 __extra_requires__ = {
 }
 
