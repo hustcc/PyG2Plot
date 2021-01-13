@@ -1,6 +1,6 @@
 # PyG2Plot
 
-> 🎨 Python3 binding for `@AntV/G2Plot` Plotting Library.
+> 🎨 Python3 binding for `@AntV/G2Plot` Plotting Library. Inspired by pyecharts.
 
 [![Latest Stable Version](https://img.shields.io/pypi/v/pyg2plot.svg)](https://pypi.python.org/pypi/pyg2plot)
 [![build Status](https://github.com/hustcc/pyg2plot/workflows/build/badge.svg?branch=main)](https://github.com/hustcc/pyg2plot/actions?query=workflow%3Abuild)
@@ -17,7 +17,7 @@ $ pip install pyg2plot
 ```py
 from pyg2plot import __version__, Plot
 
-line = Plot("line")
+line = Plot("Line")
 
 line.set_options({
   "data": [
@@ -38,7 +38,7 @@ line.set_options({
 line.render()
 ```
 
-![image](https://user-images.githubusercontent.com/7856674/104399307-5c29f200-558b-11eb-9908-0911030c79f8.png)
+![image](https://user-images.githubusercontent.com/7856674/104466432-31be5000-55f0-11eb-8333-68279d50861e.png)
 
 
 ## API
@@ -47,7 +47,7 @@ Now, only has one API of `pyg2plot`.
 
  - **Plot**
 
-1. *Plot(type: str)*: get an instance of `Plot` class.
+1. *Plot(plot_type: str)*: get an instance of `Plot` class.
 
 2. *plot.set_options(options: object)*: set the options of [G2Plot](https://g2plot.antv.vision/) into instance.
 

@@ -1,0 +1,14 @@
+{%- macro render_plot_content(plot) -%}
+  <div id="pyg2plot-plot-container-id" class="pyg2plot-plot-container"></div>
+
+  <script>
+    var plot = new G2Plot["{{plot.plot_type}}"]("pyg2plot-plot-container-id", {{ plot.js_options }});
+    plot.render();
+  </script>
+{%- endmacro %}
+
+{%- macro render_plot_dependencies(plot) -%}
+  {% for dep in plot.dependencies %}
+    <script type="text/javascript" src="{{ dep }}"></script>
+  {% endfor %}
+{%- endmacro %}
