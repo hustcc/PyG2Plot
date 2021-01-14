@@ -7,7 +7,6 @@ use jinja template to render HTML file.
 '''
 import os
 from jinja2 import Environment, FileSystemLoader
-from pyg2plot.helper.file import write_utf8_file
 from typing import Optional
 
 
@@ -29,12 +28,10 @@ class Engine:
         self.env = env or GLOBAL_ENV
 
     '''
-    write plot into path with template
+    render plot to html string with template
     '''
-    def render_to_file(self, plot: any,  path: str, template_name: str, **kwargs):
+    def render(self, plot: any, template_name: str, **kwargs):
         # get template content
         tpl = self.env.get_template(template_name)
         # render with jinja2
-        html = tpl.render(plot=plot, **kwargs)
-        # write output into file
-        write_utf8_file(path, html)
+        return tpl.render(plot=plot, **kwargs)
