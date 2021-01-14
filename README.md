@@ -51,9 +51,14 @@ Now, only has one API of `pyg2plot`.
 
 2. *plot.set_options(options: object)*: set the options of [G2Plot](https://g2plot.antv.vision/) into instance.
 
-3. *plot.render(path, env, **kwargs)*: render out a html by set the path, jinja2 env and kwargs.
+3. *plot.render(path, env, **kwargs)*: render out html file by setting the path, jinja2 env and kwargs.
+
+4. *plot.render_html(env, **kwargs)*: render out html string by setting jinja2 env and kwargs.
+
+5. *plot.dump_js_options(env, **kwargs)*: dump js options by setting jinja2 env and kwargs, use it for HTTP request.
 
 > More apis is on the way.
+
 
 ## License
 
