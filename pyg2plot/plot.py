@@ -20,7 +20,7 @@ class Plot():
     '''
     def __init__(self, plot_type: str, version: str = '2'):
         self.plot_type = plot_type
-        self.plot_id: str = uuid.uuid4().hex
+        self.plot_id = uuid.uuid4().hex
         self.version = version
         self.options = {}
 
