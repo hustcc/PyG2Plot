@@ -5,10 +5,12 @@ Created on 2021-01-14
 
 > pyg2plot Plot class.
 '''
+import uuid
 from jinja2 import Environment
 from pyg2plot.engine import Engine
 from pyg2plot.helper.code import json_dump_to_js
 from pyg2plot.helper.file import write_utf8_file
+from pyg2plot.helper.html import HTML
 from typing import Optional
 
 
@@ -18,8 +20,11 @@ class Plot():
     '''
     def __init__(self, plot_type: str, version: str = '2'):
         self.plot_type = plot_type
+        self.plot_id = uuid.uuid4().hex
         self.version = version
         self.options = {}
+
+        # page settting
         self.page_title = "PyG2Plot"
 
     '''
@@ -40,6 +45,26 @@ class Plot():
         return json_dump_to_js(self.options)
 
     '''
+    render plot into jupyter
+    '''
+    def render_notebook(
+        self,
+        env: Optional[Environment] = None,
+        **kwargs
+    ) -> HTML:
+        self.js_options = self.dump_js_options(env=env, **kwargs)
+        self.dependencies = [{
+            "name": "G2Plot",
+            "asset": "https://unpkg.com/@antv/g2plot@2",
+        }]
+        # get html string
+        return HTML(Engine(env=env).render(
+            plot=self,
+            template_name="notebook.html",
+            **kwargs
+        ))
+
+    '''
     render plot to html string
     '''
     def render_html(
@@ -48,7 +73,10 @@ class Plot():
         **kwargs
     ) -> str:
         self.js_options = self.dump_js_options(env=env, **kwargs)
-        self.dependencies = ["https://unpkg.com/@antv/g2plot@2"]
+        self.dependencies = [{
+            "name": "G2Plot",
+            "asset": "https://unpkg.com/@antv/g2plot@2",
+        }]
         # get html string
         return Engine(env=env).render(
             plot=self,

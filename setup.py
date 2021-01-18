@@ -38,6 +38,7 @@ with open(os.path.join(here, __title__, "meta.py")) as f:
 __version__ = meta["__version__"]
 __author__ = meta["__author__"]
 
+
 class UploadCommand(Command):
     description = "Build and publish the package."
     user_options = []
@@ -68,6 +69,7 @@ class UploadCommand(Command):
         os.system("twine upload dist/*")
 
         sys.exit()
+
 
 setup(
     name=__title__,

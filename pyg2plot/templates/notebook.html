@@ -1,0 +1,16 @@
+{% import 'macro' as macro %}
+<script>
+  require.config({
+    paths: {
+      {% for dep in plot.dependencies %}
+        "{{ dep.name }}": "{{ dep.asset }}"
+      {% endfor %}
+    }
+  });
+</script>
+{{ macro.render_plot_container(plot)}}
+<script>
+  require(['G2Plot'], function (G2Plot) {
+    {{ macro.render_plot_content(plot) }}
+  });
+</script>
