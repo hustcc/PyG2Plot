@@ -53,9 +53,11 @@ Now, only has one API of `pyg2plot`.
 
 3. *plot.render(path, env, **kwargs)*: render out html file by setting the path, jinja2 env and kwargs.
 
-4. *plot.render_html(env, **kwargs)*: render out html string by setting jinja2 env and kwargs.
+4. *plot.render_notebook(env, **kwargs)*: render plot on jupyter preview.
 
-5. *plot.dump_js_options(env, **kwargs)*: dump js options by setting jinja2 env and kwargs, use it for HTTP request.
+5. *plot.render_html(env, **kwargs)*: render out html string by setting jinja2 env and kwargs.
+
+6. *plot.dump_js_options(env, **kwargs)*: dump js options by setting jinja2 env and kwargs, use it for HTTP request.
 
 > More apis is on the way.
 
