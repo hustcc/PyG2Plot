@@ -1,0 +1,2 @@
+include pyg2plot/templates/*
+include README.md

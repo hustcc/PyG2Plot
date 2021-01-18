@@ -1,7 +1,9 @@
 # -*- coding: utf-8 -*-
 import io
 import os
-from setuptools import find_packages, setup
+import sys
+from shutil import rmtree
+from setuptools import Command, find_packages, setup
 
 
 def read(*names, **kwargs):
@@ -36,6 +38,37 @@ with open(os.path.join(here, __title__, "meta.py")) as f:
 __version__ = meta["__version__"]
 __author__ = meta["__author__"]
 
+class UploadCommand(Command):
+    description = "Build and publish the package."
+    user_options = []
+
+    @staticmethod
+    def status(s):
+        print("✨✨ {0}".format(s))
+
+    def initialize_options(self):
+        pass
+
+    def finalize_options(self):
+        pass
+
+    def run(self):
+        try:
+            self.status("Removing previous builds…")
+            rmtree(os.path.join(here, "dist"))
+            rmtree(os.path.join(here, "build"))
+            rmtree(os.path.join(here, "{0}.egg-info".format(__title__)))
+        except OSError:
+            pass
+
+        self.status("Building Source and Wheel distribution…")
+        os.system("{0} setup.py bdist_wheel".format(sys.executable))
+
+        self.status("Uploading the package to PyPI via Twine…")
+        os.system("twine upload dist/*")
+
+        sys.exit()
+
 setup(
     name=__title__,
     version=__version__,
@@ -52,7 +85,6 @@ setup(
     zip_safe=False,
     include_package_data=True,
     classifiers=[
-        "Development Status :: 4 - Beta",
         "Environment :: Console",
         "Intended Audience :: Developers",
         "License :: OSI Approved :: MIT License",
@@ -65,5 +97,6 @@ setup(
         "Programming Language :: Python :: 3.9",
         "Topic :: Software Development :: Libraries",
     ],
+    cmdclass={"upload": UploadCommand},
     extras_require=__extra_requires__,
 )
