@@ -40,6 +40,18 @@ class Plot():
         return json_dump_to_js(self.options)
 
     '''
+    render plot into jupyter
+    '''
+    def render_jupyter():
+        return None
+    
+    '''
+    render plot into jupyter lab
+    '''
+    def render_jupyter_lab():
+        return None
+
+    '''
     render plot to html string
     '''
     def render_html(
