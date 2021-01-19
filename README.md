@@ -1,9 +1,15 @@
 # PyG2Plot
 
-> 🎨 Python3 binding for `@AntV/G2Plot` Plotting Library. Inspired by pyecharts.
+> 🎨 Python3 binding for [`@AntV/G2Plot`](https://github.com/antvis/G2Plot) which an interactive and responsive charting library. Based on the grammar of graphics, you can easily make superior statistical charts through a few lines of code. `PyG2Plot` is inspired by pyecharts.
 
 [![Latest Stable Version](https://img.shields.io/pypi/v/pyg2plot.svg)](https://pypi.python.org/pypi/pyg2plot)
 [![build Status](https://github.com/hustcc/pyg2plot/workflows/build/badge.svg?branch=main)](https://github.com/hustcc/pyg2plot/actions?query=workflow%3Abuild)
+
+<div align="center">
+<img src="https://gw.alipayobjects.com/mdn/rms_d314dd/afts/img/A*sXqrRrEwFRQAAAAAAAAAAABkARQnAQ" width="800">
+</div>
+<br/>
+
 
 ## Installation
 
