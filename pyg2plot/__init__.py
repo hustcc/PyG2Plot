@@ -8,4 +8,4 @@ from pyg2plot.meta import __author__, __version__ # noqa
 
 from pyg2plot.plot import Plot # noqa
 
-from pyg2plot.helper.code import JsCode # noqa
+from pyg2plot.helper.code import JS # noqa

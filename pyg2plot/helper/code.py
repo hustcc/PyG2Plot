@@ -4,7 +4,7 @@ import re
 import datetime
 
 
-class JsCode:
+class JS:
     def __init__(self, js_code: str):
         self.js_code = js_code
 
@@ -16,7 +16,7 @@ class JsCode:
 def _json_dump_default(o: object):
     if isinstance(o, (datetime.date, datetime.datetime)):
         return o.isoformat()
-    if isinstance(o, JsCode):
+    if isinstance(o, JS):
         return o.replace("\\n|\\t", "").replace(r"\\n", "\n").replace(r"\\t", "\t").js_code
     return o
 
