@@ -6,9 +6,10 @@
 [![build Status](https://github.com/hustcc/pyg2plot/workflows/build/badge.svg?branch=main)](https://github.com/hustcc/pyg2plot/actions?query=workflow%3Abuild)
 
 <div align="center">
-<img src="https://gw.alipayobjects.com/mdn/rms_d314dd/afts/img/A*sXqrRrEwFRQAAAAAAAAAAABkARQnAQ" width="800">
+  <img src="https://gw.alipayobjects.com/mdn/rms_d314dd/afts/img/A*sXqrRrEwFRQAAAAAAAAAAABkARQnAQ" width="800">
 </div>
-<br/>
+
+**Document**： [Chinese README](./README.md)  ·  [Drawing statistical plots](./docs/plot.md)  ·  [In Jupyter Notebook](./docs/jupyter.md)  ·  [Principles](./docs/how.md)
 
 
 ## Installation
