@@ -1,15 +1,15 @@
 # PyG2Plot
 
-> 🎨 [`@AntV/G2Plot`](https://github.com/antvis/G2Plot) 在 Python3 上的封装。 G2Plot 是一套简单、易用、并具备一定扩展能力和组合能力的统计图表库，基于图形语法理论搭建而成。 `PyG2Plot` 实现上参考 pyecharts。
+> 🎨 PyG2Plot 是 [`@AntV/G2Plot`](https://github.com/antvis/G2Plot) 在 Python3 上的封装。 G2Plot 是一套简单、易用、并具备一定扩展能力和组合能力的统计图表库，基于图形语法理论搭建而成。
 
 [![Latest Stable Version](https://img.shields.io/pypi/v/pyg2plot.svg)](https://pypi.python.org/pypi/pyg2plot)
 [![build Status](https://github.com/hustcc/pyg2plot/workflows/build/badge.svg?branch=main)](https://github.com/hustcc/pyg2plot/actions?query=workflow%3Abuild)
 
 <div align="center">
-<img src="https://gw.alipayobjects.com/mdn/rms_d314dd/afts/img/A*sXqrRrEwFRQAAAAAAAAAAABkARQnAQ" width="800">
+  <img src="https://gw.alipayobjects.com/mdn/rms_d314dd/afts/img/A*sXqrRrEwFRQAAAAAAAAAAABkARQnAQ" width="800">
 </div>
-<br/>
 
+**相关文档**： [绘制常用统计图表](./docs/plot.md)  ·  [在 Jupyter 中使用](./docs/jupyter.md)  ·  [技术原理](./docs/how.md)
 
 ## 安装
 
