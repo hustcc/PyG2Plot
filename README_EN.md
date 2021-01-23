@@ -1,6 +1,6 @@
 # PyG2Plot
 
-> 🎨 [`@AntV/G2Plot`](https://github.com/antvis/G2Plot) 在 Python3 上的封装。 G2Plot 是一套简单、易用、并具备一定扩展能力和组合能力的统计图表库，基于图形语法理论搭建而成。 `PyG2Plot` 实现上参考 pyecharts。
+> 🎨 Python3 binding for [`@AntV/G2Plot`](https://github.com/antvis/G2Plot) which an interactive and responsive charting library. Based on the grammar of graphics, you can easily make superior statistical charts through a few lines of code. `PyG2Plot` is inspired by pyecharts.
 
 [![Latest Stable Version](https://img.shields.io/pypi/v/pyg2plot.svg)](https://pypi.python.org/pypi/pyg2plot)
 [![build Status](https://github.com/hustcc/pyg2plot/workflows/build/badge.svg?branch=main)](https://github.com/hustcc/pyg2plot/actions?query=workflow%3Abuild)
@@ -11,16 +11,16 @@
 <br/>
 
 
-## 安装
+## Installation
 
 ```bash
 $ pip install pyg2plot
 ```
 
 
-## 使用
+## Usage
 
-#### **渲染成 HTML**
+#### **render HTML**
 
 ```py
 from pyg2plot import Plot
@@ -43,15 +43,15 @@ line.set_options({
   "yField": "value",
 })
 
-# 1. 渲染成 html 文件
+# 1. render html file
 line.render("plot.html")
-# 2. 渲染成 html 字符串
+# 2. render html string
 line.render_html()
 ```
 
 ![image](https://user-images.githubusercontent.com/7856674/104466432-31be5000-55f0-11eb-8333-68279d50861e.png)
 
-#### **在 Jupyter 中使用**
+#### **render Jupyter**
 
 ```py
 from pyg2plot import Plot
@@ -81,25 +81,25 @@ line.render_notebook()
 
 ## API
 
-目前 `pyg2plot` 只提供简单的一个 API。
+Now, only has one API of `pyg2plot`.
 
  - **Plot**
 
-1. *Plot(plot_type: str)*: 获取 `Plot` 对应的类实例。
+1. *Plot(plot_type: str)*: get an instance of `Plot` class.
 
-2. *plot.set_options(options: object)*: 给图表实例设置一个 [G2Plot](https://g2plot.antv.vision/) 图形的配置，文档可以直接参考 G2Plot 官网，未进行任何二次数据结构包装。
+2. *plot.set_options(options: object)*: set the options of [G2Plot](https://g2plot.antv.vision/) into instance.
 
-3. *plot.render(path, env, **kwargs)*: 渲染出一个 HTML 文件，同时可以传入文件的路径，以及 jinja2 env 和 kwargs 参数。
+3. *plot.render(path, env, **kwargs)*: render out html file by setting the path, jinja2 env and kwargs.
 
-4. *plot.render_notebook(env, **kwargs)*: 将图形渲染到 jupyter 的预览。
+4. *plot.render_notebook(env, **kwargs)*: render plot on jupyter preview.
 
-5. *plot.render_html(env, **kwargs)*: 渲染出 HTML 字符串，同时可以传入 jinja2 env 和 kwargs 参数。
+5. *plot.render_html(env, **kwargs)*: render out html string by setting jinja2 env and kwargs.
 
-6. *plot.dump_js_options(env, **kwargs)*: 输出 Javascript 的 option 配置结构，同时可以传入 jinja2 env 和 kwargs 参数，可以用于 Server 中的 HTTP 结构返回数据结构。
+6. *plot.dump_js_options(env, **kwargs)*: dump js options by setting jinja2 env and kwargs, use it for HTTP request.
 
-> 更多区分 Plot 级别的语法糖 API 还在筹备中。
+> More apis is on the way.
 
 
-## 协议
+## License
 
 MIT@[hustcc](https://github.com/hustcc).
