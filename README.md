@@ -9,7 +9,7 @@
   <img src="https://gw.alipayobjects.com/mdn/rms_d314dd/afts/img/A*sXqrRrEwFRQAAAAAAAAAAABkARQnAQ" width="800">
 </div>
 
-**相关文档**： [绘制常用统计图表](./docs/plot.md)  ·  [在 Jupyter 中使用](./docs/jupyter.md)  ·  [技术原理](./docs/how.md)
+**相关文档**： [英文介绍](./README_EN.md)  ·  [绘制常用统计图表](./docs/plot.md)  ·  [在 Jupyter 中使用](./docs/jupyter.md)  ·  [技术原理](./docs/how.md)
 
 ## 安装
 

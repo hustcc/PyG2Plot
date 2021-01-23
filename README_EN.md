@@ -9,7 +9,7 @@
   <img src="https://gw.alipayobjects.com/mdn/rms_d314dd/afts/img/A*sXqrRrEwFRQAAAAAAAAAAABkARQnAQ" width="800">
 </div>
 
-**Document**： [Drawing statistical plots](./docs/plot.md)  ·  [In Jupyter Notebook](./docs/jupyter.md)  ·  [Principles](./docs/how.md)
+**Document**： [Chinese README](./README.md)  ·  [Drawing statistical plots](./docs/plot.md)  ·  [In Jupyter Notebook](./docs/jupyter.md)  ·  [Principles](./docs/how.md)
 
 
 ## Installation

@@ -71,7 +71,7 @@
 
 ## 水波图
 
-- 代码参考：[area.py](./plots/column.py)
+- 代码参考：[liquid.py](./plots/liquid.py)
 - 预览预览：
 
 ![image](https://user-images.githubusercontent.com/7856674/105569773-92335700-5d7f-11eb-8a44-20e19e5b17f0.png)
