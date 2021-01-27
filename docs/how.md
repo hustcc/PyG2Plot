@@ -40,6 +40,6 @@ line.render_notebook()
 
 > 所以对于 PyG2Plot，核心文件是：
 
-`plot.py`： 提供了 PyG2Plot 的几乎全部 API
-`engine.py`：提供了渲染 HTML 的能力，其实是基于 jinja2 这个模板引擎实现的
-`templates`：提供了所有的 jinja2 模板文件，对于模板怎么用，jinja2 的文档是非常非常详细的
+- `plot.py`： 提供了 PyG2Plot 的几乎全部 API
+- `engine.py`：提供了渲染 HTML 的能力，其实是基于 jinja2 这个模板引擎实现的
+- `templates`：提供了所有的 jinja2 模板文件，对于模板怎么用，jinja2 的文档是非常非常详细的
