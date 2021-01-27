@@ -10,7 +10,7 @@
     overflow: hidden;
   }
 </style>
-<div id="{{ plot.plot_id }}" class="pyg2plot-plot-container">
+<div id="{{ plot.plot_id }}" class="pyg2plot-plot-container"></div>
 {%- endmacro %}
 
 {%- macro render_plot_content(plot) -%}
