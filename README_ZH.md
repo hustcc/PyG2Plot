@@ -75,7 +75,12 @@ line.set_options({
   "yField": "value",
 })
 
+# 1. 渲染到 notebook
 line.render_notebook()
+
+# 2. 渲染到 jupyter lab
+line.load_javascript()
+line.render_jupyter_lab()
 ```
 
 
