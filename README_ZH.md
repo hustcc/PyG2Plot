@@ -79,7 +79,6 @@ line.set_options({
 line.render_notebook()
 
 # 2. 渲染到 jupyter lab
-line.load_javascript()
 line.render_jupyter_lab()
 ```
 

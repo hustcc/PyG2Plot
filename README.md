@@ -80,7 +80,6 @@ line.set_options({
 line.render_notebook()
 
 # 2. render in jupyter lab
-line.load_javascript()
 line.render_jupyter_lab()
 ```
 

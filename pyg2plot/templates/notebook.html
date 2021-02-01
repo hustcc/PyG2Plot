@@ -1,9 +1,7 @@
 <script>
   require.config({
     paths: {
-      {% for dep in plot.dependencies %}
-        "{{ dep.name }}": "{{ dep.asset }}"
-      {% endfor %}
+      "G2Plot": "https://unpkg.com/@antv/g2plot@2/dist/g2plot.min"
     }
   });
 </script>

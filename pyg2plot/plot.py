@@ -11,7 +11,6 @@ from pyg2plot.engine import Engine
 from pyg2plot.helper.code import json_dump_to_js
 from pyg2plot.helper.file import write_utf8_file
 from pyg2plot.helper.html import HTML
-from pyg2plot.helper.javascript import Javascript
 from typing import Optional
 
 G2PLOT_LIB = 'https://unpkg.com/@antv/g2plot@2'
@@ -29,12 +28,6 @@ class Plot():
 
         # page settting
         self.page_title = "PyG2Plot"
-
-    '''
-    load javascript for jupyter lab, call before render_jupyter_lab
-    '''
-    def load_javascript(self):
-        return Javascript(data='', lib=[G2PLOT_LIB])
 
     '''
     set the G2Plot options, documents [here](https://g2plot.antv.vision/)
@@ -62,10 +55,6 @@ class Plot():
         **kwargs
     ) -> HTML:
         self.js_options = self.dump_js_options(env=env, **kwargs)
-        self.dependencies = [{
-            "name": "G2Plot",
-            "asset": "{}/dist/g2plot.min".format(G2PLOT_LIB),  # require will add suffix .js
-        }]
         # get html string
         return HTML(Engine(env=env).render(
             plot=self,

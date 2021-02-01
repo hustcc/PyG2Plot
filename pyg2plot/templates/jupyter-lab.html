@@ -20,8 +20,17 @@
   <div id="{{ plot.plot_id }}" class="pyg2plot-plot-container"></div>
 
   <script>
-    var plot_{{ plot.plot_id }} = new G2Plot.{{plot.plot_type}}("{{ plot.plot_id }}", {{ plot.js_options }}); 
-    plot_{{ plot.plot_id }}.render();
+    // load javascript
+    new Promise(function(resolve, reject) {
+      var script = document.createElement("script");
+      script.onload = resolve;
+      script.onerror = reject;
+      script.src = "https://unpkg.com/@antv/g2plot@2";
+      document.head.appendChild(script);
+    }).then(() => {
+      var plot_{{ plot.plot_id }} = new G2Plot.{{plot.plot_type}}("{{ plot.plot_id }}", {{ plot.js_options }}); 
+      plot_{{ plot.plot_id }}.render();
+    });
   </script>
 </body>
 </html>
