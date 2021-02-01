@@ -19,6 +19,7 @@ _css_t = """var link = document.createElement("link");
     document.head.appendChild(link);
 """
 
+
 class Javascript:
     def __init__(
         self,

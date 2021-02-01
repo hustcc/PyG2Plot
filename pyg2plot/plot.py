@@ -16,6 +16,7 @@ from typing import Optional
 
 G2PLOT_LIB = 'https://unpkg.com/@antv/g2plot@2'
 
+
 class Plot():
     '''
     instance with plot type string
@@ -63,7 +64,7 @@ class Plot():
         self.js_options = self.dump_js_options(env=env, **kwargs)
         self.dependencies = [{
             "name": "G2Plot",
-            "asset": "{}/dist/g2plot.min".format(G2PLOT_LIB), # require will add suffix .js
+            "asset": "{}/dist/g2plot.min".format(G2PLOT_LIB),  # require will add suffix .js
         }]
         # get html string
         return HTML(Engine(env=env).render(
