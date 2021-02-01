@@ -13,6 +13,8 @@ from pyg2plot.helper.file import write_utf8_file
 from pyg2plot.helper.html import HTML
 from typing import Optional
 
+G2PLOT_LIB = 'https://unpkg.com/@antv/g2plot@2'
+
 
 class Plot():
     '''
@@ -53,14 +55,26 @@ class Plot():
         **kwargs
     ) -> HTML:
         self.js_options = self.dump_js_options(env=env, **kwargs)
-        self.dependencies = [{
-            "name": "G2Plot",
-            "asset": "https://unpkg.com/@antv/g2plot@2/dist/g2plot.min", # require will add suffix .js
-        }]
         # get html string
         return HTML(Engine(env=env).render(
             plot=self,
             template_name="notebook.html",
+            **kwargs
+        ))
+
+    '''
+    render plot into jupyter lab
+    '''
+    def render_jupyter_lab(
+        self,
+        env: Optional[Environment] = None,
+        **kwargs
+    ) -> HTML:
+        self.js_options = self.dump_js_options(env=env, **kwargs)
+        # get html string
+        return HTML(Engine(env=env).render(
+            plot=self,
+            template_name="jupyter-lab.html",
             **kwargs
         ))
 
@@ -75,7 +89,7 @@ class Plot():
         self.js_options = self.dump_js_options(env=env, **kwargs)
         self.dependencies = [{
             "name": "G2Plot",
-            "asset": "https://unpkg.com/@antv/g2plot@2",
+            "asset": G2PLOT_LIB,
         }]
         # get html string
         return Engine(env=env).render(

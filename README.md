@@ -76,7 +76,11 @@ line.set_options({
   "yField": "value",
 })
 
+# 1. render in notebook
 line.render_notebook()
+
+# 2. render in jupyter lab
+line.render_jupyter_lab()
 ```
 
 

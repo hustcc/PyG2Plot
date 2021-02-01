@@ -1,15 +1,30 @@
-{% import 'macro' as macro %}
 <!DOCTYPE html>
 <html>
 <head>
   <meta charset="UTF-8">
   <title>{{ plot.page_title }}</title>
-  {{ macro.render_plot_dependencies(plot) }}
+  {% for dep in plot.dependencies %}
+    <script type="text/javascript" src="{{ dep.asset }}"></script>
+  {% endfor %}
 </head>
 <body>
-  {{ macro.render_plot_container(plot) }}
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body, div.pyg2plot-plot-container { 
+      height: 100%;
+      overflow: hidden;
+    }
+  </style>
+
+  <div id="{{ plot.plot_id }}" class="pyg2plot-plot-container"></div>
+
   <script>
-    {{ macro.render_plot_content(plot) }}
+    var plot_{{ plot.plot_id }} = new G2Plot.{{plot.plot_type}}("{{ plot.plot_id }}", {{ plot.js_options }}); 
+    plot_{{ plot.plot_id }}.render();
   </script>
 </body>
 </html>
