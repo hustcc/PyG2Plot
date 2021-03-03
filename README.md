@@ -4,6 +4,8 @@
 
 [![Latest Stable Version](https://img.shields.io/pypi/v/pyg2plot.svg)](https://pypi.python.org/pypi/pyg2plot)
 [![build Status](https://github.com/hustcc/pyg2plot/workflows/build/badge.svg?branch=main)](https://github.com/hustcc/pyg2plot/actions?query=workflow%3Abuild)
+[![Pypi Download](https://img.shields.io/pypi/dm/pyg2plot)](https://pypi.python.org/pypi/pyg2plot)
+
 
 <div align="center">
   <img src="https://gw.alipayobjects.com/mdn/rms_d314dd/afts/img/A*sXqrRrEwFRQAAAAAAAAAAABkARQnAQ" width="800">
