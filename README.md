@@ -4,6 +4,8 @@
 
 [![Latest Stable Version](https://img.shields.io/pypi/v/pyg2plot.svg)](https://pypi.python.org/pypi/pyg2plot)
 [![build Status](https://github.com/hustcc/pyg2plot/workflows/build/badge.svg?branch=main)](https://github.com/hustcc/pyg2plot/actions?query=workflow%3Abuild)
+[![Pypi Download](https://img.shields.io/pypi/dm/pyg2plot)](https://pypi.python.org/pypi/pyg2plot)
+
 
 <div align="center">
   <img src="https://gw.alipayobjects.com/mdn/rms_d314dd/afts/img/A*sXqrRrEwFRQAAAAAAAAAAABkARQnAQ" width="800">
@@ -98,9 +100,11 @@ Now, only has one API of `pyg2plot`.
 
 4. *plot.render_notebook(env, **kwargs)*: render plot on jupyter preview.
 
-5. *plot.render_html(env, **kwargs)*: render out html string by setting jinja2 env and kwargs.
+5. *plot.render_jupyter_lab(env, **kwargs)*: render plot on jupyter lab preview.
 
-6. *plot.dump_js_options(env, **kwargs)*: dump js options by setting jinja2 env and kwargs, use it for HTTP request.
+6. *plot.render_html(env, **kwargs)*: render out html string by setting jinja2 env and kwargs.
+
+7. *plot.dump_js_options(env, **kwargs)*: dump js options by setting jinja2 env and kwargs, use it for HTTP request.
 
 > More apis is on the way.
 

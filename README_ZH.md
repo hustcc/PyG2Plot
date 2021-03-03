@@ -4,6 +4,8 @@
 
 [![Latest Stable Version](https://img.shields.io/pypi/v/pyg2plot.svg)](https://pypi.python.org/pypi/pyg2plot)
 [![build Status](https://github.com/hustcc/pyg2plot/workflows/build/badge.svg?branch=main)](https://github.com/hustcc/pyg2plot/actions?query=workflow%3Abuild)
+[![Pypi Download](https://img.shields.io/pypi/dm/pyg2plot)](https://pypi.python.org/pypi/pyg2plot)
+
 
 <div align="center">
   <img src="https://gw.alipayobjects.com/mdn/rms_d314dd/afts/img/A*sXqrRrEwFRQAAAAAAAAAAABkARQnAQ" width="800">
@@ -97,9 +99,11 @@ line.render_jupyter_lab()
 
 4. *plot.render_notebook(env, **kwargs)*: 将图形渲染到 jupyter 的预览。
 
-5. *plot.render_html(env, **kwargs)*: 渲染出 HTML 字符串，同时可以传入 jinja2 env 和 kwargs 参数。
+5. *plot.render_jupyter_lab(env, **kwargs)*: 将图形渲染到 jupyter lab 的预览。
 
-6. *plot.dump_js_options(env, **kwargs)*: 输出 Javascript 的 option 配置结构，同时可以传入 jinja2 env 和 kwargs 参数，可以用于 Server 中的 HTTP 结构返回数据结构。
+6. *plot.render_html(env, **kwargs)*: 渲染出 HTML 字符串，同时可以传入 jinja2 env 和 kwargs 参数。
+
+7. *plot.dump_js_options(env, **kwargs)*: 输出 Javascript 的 option 配置结构，同时可以传入 jinja2 env 和 kwargs 参数，可以用于 Server 中的 HTTP 结构返回数据结构。
 
 > 更多区分 Plot 级别的语法糖 API 还在筹备中。
 
