@@ -34,8 +34,10 @@ line.set_options({
 line.render("plot.html")
 # 2. 渲染成 html 字符串
 line.render_html()
-# 2. 渲染到 Jupyter 的预览区
+# 3. 渲染到 Jupyter 的预览区
 line.render_notebook()
+# 4. 渲染到 Jupyter Lab 的预览区
+line.render_jupyter_lab()
 ```
 
 > 所以对于 PyG2Plot，核心文件是：

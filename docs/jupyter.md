@@ -109,5 +109,6 @@ scatter.render_notebook()
 
 ![image](https://user-images.githubusercontent.com/7856674/105945664-ab4e4780-60a0-11eb-88d9-602a86e39368.png)
 
+而对于 Jupyter Lab，除了上述代码中的 `render_notebook` 改成 `render_jupyter_lab` 之外，其他用法完全一样。
 
 > 大概就是这样的一个使用方式了，本质没有任何使用区别。更多其他的图表类型，可以参考 [绘制常用统计图表](./plot.md)。
