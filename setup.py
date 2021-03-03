@@ -27,7 +27,7 @@ __requires__ = ["jinja2~=2.11.2", "simplejson"]
 __extra_requires__ = {
 }
 
-__keywords__ = ["AntV", "G2Plot" "charts", "visualazation"]
+__keywords__ = ["AntV", "G2Plot", "charts", "PyG2Plot", "visualization"]
 
 # Load the package's _version.py module as a dictionary.
 here = os.path.abspath(os.path.dirname(__file__))
