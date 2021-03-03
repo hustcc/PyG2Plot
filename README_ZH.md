@@ -103,7 +103,7 @@ line.render_jupyter_lab()
 
 6. *plot.render_html(env, **kwargs)*: 渲染出 HTML 字符串，同时可以传入 jinja2 env 和 kwargs 参数。
 
-6. *plot.dump_js_options(env, **kwargs)*: 输出 Javascript 的 option 配置结构，同时可以传入 jinja2 env 和 kwargs 参数，可以用于 Server 中的 HTTP 结构返回数据结构。
+7. *plot.dump_js_options(env, **kwargs)*: 输出 Javascript 的 option 配置结构，同时可以传入 jinja2 env 和 kwargs 参数，可以用于 Server 中的 HTTP 结构返回数据结构。
 
 > 更多区分 Plot 级别的语法糖 API 还在筹备中。
 
