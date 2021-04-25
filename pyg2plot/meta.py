@@ -6,5 +6,5 @@ Created on 2021-01-14
 > pkg meta information
 '''
 
-__version__ = "0.1.7"
+__version__ = "0.1.8"
 __author__ = "hustcc"

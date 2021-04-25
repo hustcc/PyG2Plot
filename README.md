@@ -85,6 +85,36 @@ line.render_notebook()
 line.render_jupyter_lab()
 ```
 
+#### **use JavaScript callback**
+
+```py
+from pyg2plot import Plot, JS
+
+line = Plot("Line")
+
+line.set_options({
+  "height": 400, # set a default height in jupyter preview
+  "data": [
+    { "year": "1991", "value": 3 },
+    { "year": "1992", "value": 4 },
+    { "year": "1993", "value": 3.5 },
+    { "year": "1994", "value": 5 },
+    { "year": "1995", "value": 4.9 },
+    { "year": "1996", "value": 6 },
+    { "year": "1997", "value": 7 },
+    { "year": "1998", "value": 9 },
+    { "year": "1999", "value": 13 },
+  ],
+  "xField": "year",
+  "yField": "value",
+  "lineStye": JS('''function() {
+    return { stroke: 'red' }; 
+  }''')
+})
+```
+
+Use `JS` API, you can use JavaScript syntax for callback.
+
 
 ## API
 
